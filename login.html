@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.FShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+
+    <main>
+
+        <section class="main-section loginform ">
+            <div class="container">
+
+                <div class="user signinbox">
+                    <div class="imagebox"> <img src="assets/imgs/login.jpg"> </div>
+                    <div class="formbox">
+                        <div class="form ">
+
+
+                            <div class="col-md-12 text-center mb-3">
+                                <a href="/"> <img class="w-25 h-25" src="assets/imgs/clipart2834150.png" alt=""></a>
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <input type="text" class="form-control" id="usernamech" placeholder="userName"
+                                    name="useremail" required>
+                                <span for="usernamech" class=""></span>
+                            </div>
+
+                            <div class="col-md-12 mb-2">
+                                <input type="password" class="form-control" id="userpasswordch" placeholder="Password" name="userpassword"
+                                    required>
+                                <span for="userpasswordch" class=""></span>
+                            </div>
+
+                            <div class="col-12 pt-2">
+                                <div class="col-12"> <button class="btn btn-primary w-100" onclick="login()">Log
+                                        in</button>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 pt-4 ">
+                                <p class="signup-text">Don't have an account? <a href="#"
+                                        onClick="toggleform();">Signup</a></p>
+                            </div>
+
+                            <div class="col-12 text-dark">
+                                <span class=" usertest"> username: Karn.Yong@Mecallapi.Com</span>
+                                <p class="usertest py-1"> Password: mecallapi</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="user signupbox">
+                    <div class="formbox">
+                        <div class="form">
+
+
+                            <div class="col-md-12 text-center mb-3">
+                                <a href="/"> <img class="w-25 h-25" src="assets/imgs/clipart2834150.png" alt=""></a>
+                            </div>
+
+                            <div class="gg col-md-12">
+                                <input type="text" class="form-control " id="validationusersignup"
+                                    placeholder="User Name" name="username" required>
+                                <span for="validationusersignup" class="text-lowercase"></span>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="email" class="form-control" id="validationemailsignup" placeholder="Email"
+                                    name="useremail" required>
+                                <span for="validationemailsignup" class="text-lowercase"></span>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="tel" class="form-control" id="validationphonesignup" placeholder="Phone"
+                                    name="userphone" required>
+                                <span for="validationphonesignup" class="text-lowercase"></span>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" id="validationpasssignup"
+                                    placeholder="Password" name="userpassword" required>
+                                <span for="validationpasssignup" class="text-lowercase "></span>
+                            </div>
+
+
+                            <div class="col-12 pt-2">
+                                <div class="col-12"> <button class="btn btn-primary w-100" type="submit">Sign
+                                        up</button>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 pt-4 ">
+                                <p class="signup-text">Already have an account? <a href="#"
+                                        onClick="toggleform();">Login</a></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="imagebox"> <img src="assets/imgs/woman.webp"> </div>
+
+                </div>
+        </section>
+
+    </main>
+
+
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/login.js"></script>
+</body>
+
+</html>

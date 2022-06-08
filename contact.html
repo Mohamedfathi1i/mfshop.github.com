@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.FShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <header class="section-header">
+
+
+        <section class="header-main bg-bluetop">
+
+            <div class="container-fluid px-5">
+                <div class="row p-2 pt-3 pb-2 d-flex align-items-center justify-content-evenly">
+
+                    <div class="col-md-1">
+                        <img class="d-none d-md-flex w-75" src="assets/imgs/clipart2834150.png">
+                    </div>
+
+                    <div class="col-md-4">
+
+
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-light bg-bluetop text-white">
+                            <div class="container-fluid">
+                                <a class="navbar-brand d-md-none d-md-flex" href="#">Categories</a>
+                                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav nav2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/shop.html">Shop</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/About.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/contact.html">Conatact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="d-flex form-inputs">
+                            <input class="form-control" type="text" placeholder="Search any product...">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 ">
+                        <div class="d-flex d-none d-md-flex flex-row align-items-center justify-content-center point"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span class="shop-bag"><i class='bx bxs-shopping-bag'></i></span>
+                            <div class="d-flex flex-column ms-2 text-white ">
+                                <span class="qty" id="cardCounter"></span>
+                                <span class="" id="totalprice"></span>
+
+                                <div class="modal fade text-dark" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="cartbody">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Check out</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2 pt-3 pt-md-0">
+                        <nav class="navbar navbar-dark navbar-expand p-0">
+                            <div class="container-fluid">
+                                <ul class="navbar-nav d-flex align-items-center">
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-row">
+                                            <img id="avatar" src="" class="rounded-circle" width="30">
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown text-white">
+                                        <div class=" d-flex align-items-center justify-content-center text-white">
+                                            <a href="" id="fname"
+                                                class=" ms-3 text-white text-decoration-none loginhead "></a>
+                                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                                            <ul class="dropdown-menu" id="toggeldata"
+                                                aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#" id="profile">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="logout()"> Log Out</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+    </header>
+
+
+
+
+    <main>
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+    <footer class="container-fluid">
+
+        <button id="btnup" class="btn btn-dark px-2"><i class="fa fa-arrow-alt-circle-up"></i></button>
+
+
+        <div class="row pt-5 text-white">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 fs-1 d-flex justify-content-center align-items-center">
+
+                <i class="fa-brands fa-facebook-square me-3"></i>
+                <i class="fa-brands fa-twitter-square me-3"></i>
+                <i class="fa-brands fa-instagram me-3"></i>
+                <i class="fa-brands fa-youtube me-3"></i>
+                <i class="fa-brands fa-pinterest me-3"></i>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-4">
+                <p class="fs-6 w-50 text-center"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+                    voluptas corporis temporibus atque eveniet debitis aliquid vitae laudantium cum
+                    quisquam?</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <h2>M.Fshop</h2>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Egypt</p>
+            </div>
+            <div class="text-white text-center">
+                <hr>
+                <p>Created by Mohamed fathi. © 2022</p>
+            </div>
+
+
+
+
+
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/login.js"></script>
+    <script src="assets/js/mine.js"></script>
+</body>
+
+</html>

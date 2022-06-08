@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.FShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="loading">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+
+
+
+    <header class="section-header">
+
+
+        <section class="header-main bg-bluetop">
+
+            <div class="container-fluid px-md-5">
+                <div class="row p-2 pt-3 pb-2 d-flex align-items-center justify-content-evenly">
+
+                    <div class="d-none d-md-flex col-md-1">
+                        <img class=" d-md-flex w-75" src="assets/imgs/clipart2834150.png">
+                    </div>
+
+                    <div class="col-12 col-md-4">
+
+
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-light bg-bluetop text-white ">
+                            <div class="container-fluid">
+                                <a class="navbar-brand d-md-none d-md-flex col-2" href="#">
+                                    <img class=" d-md-none w-100" src="assets/imgs/clipart2834150.png">
+                                </a>
+                                <div class=" d-flex d-md-none form-inputs col-6">
+                                    <input id="searchall" class="form-control fs-6" type="text" placeholder="Search any product...">
+                                    <i class="bx bx-search"></i>
+                                </div> <button class="navbar-toggler text-white ms-auto" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                                    aria-controls="navbarNavDropdown" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav nav2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/shop.html">Shop</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/About.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/contact.html">Conatact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class=" d-none d-md-flex form-inputs">
+                            <input class="form-control" id="searchall" type="text" placeholder="Search any product...">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-md-2 order-2 order-md-1 ">
+                        <div class="d-flex d-md-flex flex-row align-items-center justify-content-center point"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span class="shop-bag"><i class='bx bxs-shopping-bag'></i></span>
+                            <div class="d-flex flex-column ms-2 text-white ">
+                                <span class="qty" id="cardCounter"></span>
+                                <span class="" id="totalprice"></span>
+
+                                <div class="modal fade text-dark" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Cart</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="cartbody">
+
+
+
+                                                <div class="container-fluid ">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-around align-items-center text-center">
+                                                            <div class="d1 overflow-hidden px-3 col-1" id="d1">ID</div>
+                                                            <div class="d2 overflow-hidden px-3 col-4" id="d2">name </div>
+                                                            <div class="d3 overflow-hidden px-3 col-2" id="d3">price</div>
+                                                            <div class="d3 overflow-hidden px-3 col-1" id="d5">Qunt</div>
+                                                            <div class="d4 overflow-hidden px-3 col-2" id="d4">product</div>
+                                                            <div class="d3 overflow-hidden px-3 col-2" id="d3"><span>Remove</span></div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row" id="cartconatin">
+
+
+                                                        <!-- <div class="col-12 d-flex justify-content-around align-items-center">
+                                                            <div class="d1 overflow-hidden px-3" id="d1">#1</div>
+                                                            <div class="d2 overflow-hidden px-3" id="d2">lather</div>
+                                                            <div class="d3 overflow-hidden px-3" id="d3">20</div>
+                                                            <div class="d4 overflow-hidden px-3" id="d4"><img class="w-100" height="50px" src="assets/imgs/2.jpg" alt=""></div>
+                                                            <div class="d3 overflow-hidden px-3" id="d3"><button class="btn btn-success">
+                                                                <i class="fas fa-delete-left"></i></button>
+                                                            </div>
+                                                        
+                                                        
+                                                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Check out</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-md-2 pt-3 pt-md-0 order-1 order-md-2">
+                        <nav class="navbar navbar-dark navbar-expand p-0">
+                            <div class="container-fluid">
+                                <ul class="navbar-nav d-flex align-items-center">
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-row">
+                                            <img id="avatar" src="" class="rounded-circle" width="30">
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown text-white">
+                                        <div class=" d-flex align-items-center justify-content-center text-white">
+                                            <a href="" id="fname"
+                                                class=" ms-3 text-white text-decoration-none loginhead "></a>
+                                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                                            <ul class="dropdown-menu" id="toggeldata"
+                                                aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#" id="profile">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="logout()"> Log Out</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+    </header>
+
+
+
+    <main>
+
+
+
+        <section class="home" id="home">
+
+            <div class="home-slider owl-carousel">
+
+                <div class="item">
+                    <img src="assets/imgs/slider-01.webp" alt="">
+                    <div class="content">
+                        <h3>heavy discounts</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
+                        <a href="#"><button class="explore">discover</button></a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets/imgs/slider-02_907d8567-716a-4c2d-bfb3-52122a69f888.webp" alt="">
+                    <div class="content">
+                        <h3>latest gadgets</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
+                        <a href="#"><button class="explore">discover</button></a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets/imgs/slider-03_cfc47425-1301-4ef5-b848-67d02b81d578.webp" alt="">
+                    <div class="content">
+                        <h3>trending shoes</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
+                        <a href="#"><button class="explore">discover</button></a>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <img src="assets/imgs/home_img4.jpg" alt="">
+                    <div class="content">
+                        <h3>fresh groceries</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, neque.</p>
+                        <a href="#"><button class="explore">discover</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="deal" id="deal">
+
+            <div class="container-fluid px-4 pt-2">
+                <div class="row d-flex justify-content-center align-items-center">
+
+                    <div class="col-12 col-md-6 pt-3">
+
+                        <div class="d-flex align-items-center justify-content-start ">
+                            <img src="assets/imgs/deal1.jpg" class="position-relative rounded-4 w-100 h-100" alt="">
+                            <div class="content position-absolute ps-5 text-white">
+                                <h3 class="fs-1">latest laptop</h3>
+                                <p class="fs-6">upto 25% off on first purchase</p>
+                                <a href="#"><button class="explore fs-6">explore</button></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-md-6 pt-3">
+
+                        <div class="d-flex align-items-center justify-content-start">
+                            <img src="assets/imgs/deal2.jpg" class="position-relative rounded-4 w-100 h-100" alt="">
+                            <div class="content position-absolute ps-5 text-white">
+                                <h3 class="fs-1">latest laptop</h3>
+                                <p class="fs-6">upto 25% off on first purchase</p>
+                                <a href="#"><button class="explore fs-6">explore</button></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="row pt-5 d-flex align-items-center justify-content-evenly">
+                    <div class="col-12 col-md-6 col-lg-3 icons">
+                        <div class="d-flex justify-content-center align-items-center flex-column ">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>fast delivery</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, molestiae?</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 icons">
+                        <div class="d-flex justify-content-center align-items-center flex-column ">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>fast delivery</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, molestiae?</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 icons">
+                        <div class="d-flex justify-content-center align-items-center flex-column ">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>fast delivery</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, molestiae?</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 icons">
+                        <div class="d-flex justify-content-center align-items-center flex-column ">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h3>fast delivery</h3>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, molestiae?</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="category">
+            <div class=" container-fluid px-4">
+
+                <div class="d-flex justify-content-center align-items-center mt-5">
+                    <div class="p-2 text-white categoryP">OUR CATEGORIES</div>
+                </div>
+
+                <div class="d-flex justify-content-center mt-3">
+                    <span class="text text-center fs-5 fw-semibold">Finding Best Products Now<br> in Your
+                        Fingertips</span>
+                </div>
+                <div class="row mt-2 g-4 mb-5 calsuol2 owl-carousel cat">
+
+                    <div class="item">
+                        <div class="card p-1">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span>Mobile</span> <span>Phones</span> </div>
+                                <div> <img src="assets/imgs/phone2.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span>Men</span> <span>Watches</span> </div>
+                                <div> <img src="assets/imgs/watch1.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"><span></span> <span>shoes </span> </div>
+                                <div> <img src="assets/imgs/g_img4.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span></span> <span>perfume</span> </div>
+                                <div> <img src="assets/imgs/Pink-perfume-bottle-on-transparent-background-PNG.png"
+                                        height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2tr5">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span>woman</span> <span>dress</span>
+                                </div>
+                                <div> <img src="assets/imgs/favpng_woman-female-cocktail-dress.png" height="100"
+                                        width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span></span> <span>accessory</span>
+                                </div>
+                                <div> <img src="assets/imgs/sma3a.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span></span> <span>teshirt </span>
+                                </div>
+                                <div> <img src="assets/imgs/tshirt.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card p-2">
+                            <div class="d-flex justify-content-between align-items-center p-2">
+                                <div class="flex-column lh-1 imagename"> <span>Laptops</span> </div>
+                                <div> <img src="assets/imgs/laptop.jpg" height="100" width="100" /> </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+        </section>
+
+
+
+
+        <section>
+            <div class="container bg-white">
+
+                <div class="row pb-4">
+                    <div class="col-12 ">
+                        <h2 class="fw-bold">Trending products</h2>
+                    </div>
+                </div>
+
+                <div class="row" id="latest">
+
+                    <!-- <div class="col-lg-3 col-sm-6">
+                        <div class=" d-flex flex-column align-items-center justify-content-center product-item my-3">
+                            <div class="product">
+                                <img src="https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                    alt="">
+                                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                                </ul>
+                            </div>
+
+
+                            <div class="title pt-4 pb-1">Pinafore Dresses</div>
+
+
+                            <div class="d-flex align-content-center justify-content-center">
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                                <span class="fas fa-star"></span>
+                            </div>
+
+
+                            <div class="price">$ 60.0</div>
+
+
+                        </div>
+                    </div> -->
+                    <!-- ************************************************************** -->
+
+                </div>
+
+                <div class="row text-center">
+                    <div class="col-12 pt-3">
+
+                        <a href="shop.html"><button class="btn btn-dark"> See More</button></a>
+
+
+                    </div>
+                </div>
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+    <footer class="container-fluid mt-5">
+
+        <button id="btnup" class="btn btn-dark px-2"><i class="fa fa-arrow-alt-circle-up"></i></button>
+
+
+        <div class="row pt-5 text-white">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 fs-1 d-flex justify-content-center align-items-center">
+
+                <i class="fa-brands fa-facebook-square me-3"></i>
+                <i class="fa-brands fa-twitter-square me-3"></i>
+                <i class="fa-brands fa-instagram me-3"></i>
+                <i class="fa-brands fa-youtube me-3"></i>
+                <i class="fa-brands fa-pinterest me-3"></i>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-4">
+                <p class="fs-6 w-50 text-center"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+                    voluptas corporis temporibus atque eveniet debitis aliquid vitae laudantium cum
+                    quisquam?</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <h2>M.Fshop</h2>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Egypt</p>
+            </div>
+            <div class="text-white text-center">
+                <hr>
+                <p>Created by Mohamed fathi. © 2022</p>
+            </div>
+
+
+
+
+
+        </div>
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="assets/js/mine.js"></script>
+</body>
+
+</html>

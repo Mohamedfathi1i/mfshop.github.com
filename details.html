@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.FShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="loading">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+
+
+    <header class="section-header">
+
+
+        <section class="header-main bg-bluetop">
+
+            <div class="container-fluid px-md-5">
+                <div class="row p-2 pt-3 pb-2 d-flex align-items-center justify-content-evenly">
+
+                    <div class="d-none d-md-flex col-md-1">
+                        <img class=" d-md-flex w-75" src="assets/imgs/clipart2834150.png">
+                    </div>
+
+                    <div class="col-12 col-md-4">
+
+
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-light bg-bluetop text-white ">
+                            <div class="container-fluid">
+                                <a class="navbar-brand d-md-none d-md-flex col-2" href="#">
+                                    <img class=" d-md-none w-100" src="assets/imgs/clipart2834150.png">
+                                </a>
+                                <div class=" d-flex d-md-none form-inputs col-6">
+                                    <input id="searchall" class="form-control fs-6" type="text" placeholder="Search any product...">
+                                    <i class="bx bx-search"></i>
+                                </div> <button class="navbar-toggler text-white ms-auto" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                                    aria-controls="navbarNavDropdown" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav nav2">
+                                        <li class="nav-item">
+                                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/shop.html">Shop</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/About.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link" href="/contact.html">Conatact Us</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class=" d-none d-md-flex form-inputs">
+                            <input class="form-control" id="searchall" type="text" placeholder="Search any product...">
+                            <i class="bx bx-search"></i>
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-md-2 order-2 order-md-1 ">
+                        <div class="d-flex d-md-flex flex-row align-items-center justify-content-center point"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <span class="shop-bag"><i class='bx bxs-shopping-bag'></i></span>
+                            <div class="d-flex flex-column ms-2 text-white ">
+                                <span class="qty" id="cardCounter"></span>
+                                <span class="" id="totalprice"></span>
+
+                                <div class="modal fade text-dark" id="staticBackdrop" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="staticBackdropLabel">Cart</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body" id="cartbody">
+
+
+
+                                                <div class="container-fluid ">
+                                                    <div class="row">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-around align-items-center text-center">
+                                                            <div class="d1 overflow-hidden px-3 col-1" id="d1">ID</div>
+                                                            <div class="d2 overflow-hidden px-3 col-4" id="d2">name </div>
+                                                            <div class="d3 overflow-hidden px-3 col-2" id="d3">price</div>
+                                                            <div class="d3 overflow-hidden px-3 col-1" id="d5">Qunt</div>
+                                                            <div class="d4 overflow-hidden px-3 col-2" id="d4">product</div>
+                                                            <div class="d3 overflow-hidden px-3 col-2" id="d3"><span>Remove</span></div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row" id="cartconatin">
+
+
+                                                        <!-- <div class="col-12 d-flex justify-content-around align-items-center">
+                                                            <div class="d1 overflow-hidden px-3" id="d1">#1</div>
+                                                            <div class="d2 overflow-hidden px-3" id="d2">lather</div>
+                                                            <div class="d3 overflow-hidden px-3" id="d3">20</div>
+                                                            <div class="d4 overflow-hidden px-3" id="d4"><img class="w-100" height="50px" src="assets/imgs/2.jpg" alt=""></div>
+                                                            <div class="d3 overflow-hidden px-3" id="d3"><button class="btn btn-success">
+                                                                <i class="fas fa-delete-left"></i></button>
+                                                            </div>
+                                                        
+                                                        
+                                                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    </div>
+
+                                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Check out</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class=" col-6 col-md-2 pt-3 pt-md-0 order-1 order-md-2">
+                        <nav class="navbar navbar-dark navbar-expand p-0">
+                            <div class="container-fluid">
+                                <ul class="navbar-nav d-flex align-items-center">
+                                    <li class="nav-item">
+                                        <div class="d-flex flex-row">
+                                            <img id="avatar" src="" class="rounded-circle" width="30">
+                                        </div>
+                                    </li>
+                                    <li class="nav-item dropdown text-white">
+                                        <div class=" d-flex align-items-center justify-content-center text-white">
+                                            <a href="" id="fname"
+                                                class=" ms-3 text-white text-decoration-none loginhead "></a>
+                                            <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
+                                                role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+
+                                            <ul class="dropdown-menu" id="toggeldata"
+                                                aria-labelledby="navbarDropdownMenuLink">
+                                                <li><a class="dropdown-item" href="#" id="profile">Profile</a></li>
+                                                <li><a class="dropdown-item" href="#" onclick="logout()"> Log Out</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+    </header>
+
+
+    
+    <div class="container detal">
+
+        <div class="row align-items-end pt-4">
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active rounded ">
+                            <img id="img1" src="" class="d-block w-100 rounded-4" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="img2" src="" class="d-block w-100 rounded-4 " alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="img3" src="" class="d-block w-100  rounded-4 " alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img id="img4" src="" class="d-block w-100  rounded-4" alt="...">
+                        </div>
+
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 ps-5">
+                <div class="row pt-5 ">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <div>
+                            <p class="officalstore"><i class="fa-solid fa-shop"></i> Offical Store</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                        <h1><b id="titelproduct" class="text-capitalize"></b></h1>
+                    </div>
+                </div>
+
+                <div class="row pt-3 ">
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-start align-items-center">
+                        <div class="officalstore me-4">
+                            <h5 class="officalstore text-black">Brand : <p class="badge text-bg-success"
+                                    id="brandproduct">apple</p>
+                            </h5>
+                        </div>
+
+                        <div class="officalstore">
+                            <h5 class="officalstore text-black">Catagory : <p class="badge text-bg-success"
+                                    id="categoryproduct">
+                                </p>
+                            </h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <h6><i class="fa-solid fa-star"></i><span id="rateproduct">  </span>(5 like) | 0 dislike
+                        </h6>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-x-12">
+                        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                            <div class="btn-group-lg" role="group" aria-label="First group">
+                                <button type="button" class="btn btn-outline-danger " value="sm">SM</button>
+                                <button type="button" class="btn btn-outline-danger " value="m">M</button>
+                                <button type="button" class="btn btn-outline-danger" value="l">L</button>
+                                <button type="button" class="btn btn-outline-danger " value="xl">XL</button>
+                                <button type="button" class="btn btn-outline-danger " value="xxl">XXL</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row pt-3">
+                    <div class="col-12 d-flex justify-content-between align-items-center text-cente">
+                        <div class="col-3">
+                            <p class=""><del id="befordiscounrproduct"></del></p>
+                        </div>
+                        <div class="col-6 ">
+                            <p class="fs-1 text-danger fw-bold" id="priceproduct"></p>
+                        </div>
+                        <div class="col-3 ">
+                            <p class="badge text-bg-danger fs-4" id="discountPercentageproduct"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row pt-3">
+
+                    <div class="col-12 d-flex justify-content-start align-items-center ">
+                        <div class="col-9 me-2">
+                            <button class="btn btn-success py-2 w-100" type="button" onclick="productToCard()">ADD To Card</button>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input type="number" class="form-control py-2 text-center"
+                                    aria-label="Dollar amount (with dot and two decimal places)" id="pquantity" value="1" min="1">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row pt-4 ">
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-start align-items-center">
+                        <div class="officalstore me-3">
+                            <h5 class="officalstore text-black">Brand : <p class="badge text-bg-success ">apple</p>
+                            </h5>
+                        </div>
+
+                        <div class="officalstore me-3">
+                            <h5 class="officalstore text-black">Catagory : <p class="badge text-bg-success ">Samrt
+                                    Phone
+                                </p>
+                            </h5>
+                        </div>
+
+                        <div class="officalstore">
+                            <h5 class="officalstore text-black">Catagory : <p class="badge text-bg-success ">Samrt
+                                    Phone
+                                </p>
+                            </h5>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="row mb-5">
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 pt-5">
+                <div class="row">
+
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                        <p class="text-success fs-2">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-between align-items-center">
+                        <p class="text-black-50 fs-5">Information </p>
+                        <p class="text-black-50 fs-5">Information </p>
+                    </div>
+
+                    <div
+                        class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center">
+                        <a class="btn btn-outline-success rounded-pill" href="#">See More</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 pt-5">
+
+                <div class="row ms-5">
+                    <div class="col-12">
+                        <p class="fs-2"> Descrabtion</p>
+                    </div>
+                    <div class="col-12">
+                        <p class="fs-6" id="descriptonproduct"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <button id="btnup" class="btn btn-success px-2"><i class="fa fa-arrow-alt-circle-up"></i></button>
+
+
+    <footer class="container-fluid bg-success">
+        <div class="row pt-5 text-white">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 fs-1 d-flex justify-content-center align-items-center">
+
+                <i class="fa-brands fa-facebook-square me-3"></i>
+                <i class="fa-brands fa-twitter-square me-3"></i>
+                <i class="fa-brands fa-instagram me-3"></i>
+                <i class="fa-brands fa-youtube me-3"></i>
+                <i class="fa-brands fa-pinterest me-3"></i>
+
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-4">
+                <p class="fs-6 w-50 text-center"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Veritatis
+                    voluptas corporis temporibus atque eveniet debitis aliquid vitae laudantium cum
+                    quisquam?</p>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <h2>M.Fshop</h2>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 d-flex justify-content-center align-items-center mt-1">
+                <p class="fs-5"><i class="fa-solid fa-location-dot"></i> Egypt</p>
+            </div>
+            <div class="text-white text-center">
+                <hr>
+                <p>Created by Mohamed fathi. © 2022</p>
+            </div>
+
+
+
+
+
+        </div>
+    </footer>
+
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/details.js"></script>
+    <script src="assets/js/mine.js"></script>
+</body>
+
+</html>
